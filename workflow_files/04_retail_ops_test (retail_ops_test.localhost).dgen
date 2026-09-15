@@ -1,0 +1,727 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Devart (www.devart.com), Data-Generator document file -->
+<!-- Modifying this generated file will probably render it invalid -->
+<DataGenDocument xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="7.2">
+  <ConnectionModel>
+    <PropertyValue Name="Database">77a9b459-6f15-4675-8e18-cdd88f58e376</PropertyValue>
+    <PropertyValue Name="Id">caef3d6a-19a1-423e-85d7-0a0b31412c59</PropertyValue>
+    <PropertyValue Name="ConnectionString" xml:space="preserve">User Id=postgres;Host=localhost;Port=5432;Database=retail_ops_test;Unicode=True;Connection Timeout=15;Integrated Security=False</PropertyValue>
+  </ConnectionModel>
+  <Settings>
+    <Provider>77a9b459-6f15-4675-8e18-cdd88f58e376</Provider>
+    <AllowNulls>true</AllowNulls>
+    <IncludeNullsPercent>10</IncludeNullsPercent>
+    <AllowEmptyString>false</AllowEmptyString>
+    <IncludeEmptyStringPercent>10</IncludeEmptyStringPercent>
+    <DatabaseName>retail_ops_test</DatabaseName>
+    <PopulationType>RowsCount</PopulationType>
+    <RowsToGenerate>1000</RowsToGenerate>
+    <ProportionOfExistingData>10</ProportionOfExistingData>
+    <TimeTicksToPopulate>100000000</TimeTicksToPopulate>
+    <GenerateUniqueValues>false</GenerateUniqueValues>
+    <TruncateTables>true</TruncateTables>
+    <DistributionMode>Seed</DistributionMode>
+    <Seed>42</Seed>
+    <LastSeedValue>0</LastSeedValue>
+    <Language>US</Language>
+    <ShowDataPreview>true</ShowDataPreview>
+  </Settings>
+  <Tables>
+    <Table Name="sales.categories">
+      <Checked>true</Checked>
+      <Settings>
+        <Truncate>true</Truncate>
+        <RowsToGenerate>0</RowsToGenerate>
+        <PopulationDetails>
+          <PopulationType>RowsCount</PopulationType>
+          <RowsCount>1000</RowsCount>
+          <LookupProportion>30</LookupProportion>
+          <ProportionOfExistingData>10</ProportionOfExistingData>
+          <TimeTicksToPopulate>100000000</TimeTicksToPopulate>
+        </PopulationDetails>
+      </Settings>
+      <Columns>
+        <Column Name="category_id">
+          <Checked>true</Checked>
+          <DataType>integer</DataType>
+          <GeneratorOptions xsi:type="PgSqlIntegerGeneratorOptions">
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>true</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Increment xsi:type="xsd:int">1</Increment>
+            <ValueDistributionMode>Sequential</ValueDistributionMode>
+            <SeedValue>42</SeedValue>
+            <MinValue>1</MinValue>
+            <MaxValue>2147483647</MaxValue>
+            <UseDefault>false</UseDefault>
+          </GeneratorOptions>
+          <GeneratorType>PgSqlIntegerGenerator</GeneratorType>
+          <GeneratorId>d87b889b-eccb-4e6e-911a-8f250d6d7dd0</GeneratorId>
+          <GeneratorName>ID (sequential)</GeneratorName>
+          <GeneratorDescription>1, 2, 3, 4, ..., 9, 10, 11, 12, ...</GeneratorDescription>
+          <GeneratorCategory>Business</GeneratorCategory>
+          <Length>4</Length>
+          <Precision>10</Precision>
+        </Column>
+        <Column Name="category_name">
+          <Checked>true</Checked>
+          <DataType>character varying</DataType>
+          <GeneratorOptions xsi:type="PgSqlRegularExpressionGeneratorOptions">
+            <AllowEmptyStrings>false</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Seed</ValueDistributionMode>
+            <SeedValue>42</SeedValue>
+            <Unique>true</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Expression>Accessories|Audible|Automotive|Books|Beauty|Baby|Clothing|Computers|Crafts|Electronics|Food|Furniture|Games|Garden|Gifts|Health|Home|Jewelry|Movies|Music|Patio|Pets|Pharmacy|Office|Outdoors|Shoes|Sports|Tools|Toys</Expression>
+          </GeneratorOptions>
+          <GeneratorType>PgSqlRegularExpressionGenerator</GeneratorType>
+          <GeneratorId>11573bf0-227a-423c-9ad0-e13d11efbbbf</GeneratorId>
+          <GeneratorName>Product Category</GeneratorName>
+          <GeneratorDescription>Movies, Pharmacy, Garden, Books, Clothing, Furniture, ...</GeneratorDescription>
+          <GeneratorCategory>Product</GeneratorCategory>
+          <Length>80</Length>
+        </Column>
+      </Columns>
+    </Table>
+    <Table Name="sales.customers">
+      <Checked>true</Checked>
+      <Settings>
+        <Truncate>true</Truncate>
+        <RowsToGenerate>0</RowsToGenerate>
+        <PopulationDetails>
+          <PopulationType>RowsCount</PopulationType>
+          <RowsCount>1000</RowsCount>
+          <LookupProportion>30</LookupProportion>
+          <ProportionOfExistingData>10</ProportionOfExistingData>
+          <TimeTicksToPopulate>100000000</TimeTicksToPopulate>
+        </PopulationDetails>
+      </Settings>
+      <Columns>
+        <Column Name="customer_id">
+          <Checked>true</Checked>
+          <DataType>bigint</DataType>
+          <GeneratorOptions xsi:type="PgSqlBigIntegerGeneratorOptions">
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>true</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Increment xsi:type="xsd:long">1</Increment>
+            <ValueDistributionMode>Sequential</ValueDistributionMode>
+            <SeedValue>43</SeedValue>
+            <MinValue>1</MinValue>
+            <MaxValue>9223372036854775807</MaxValue>
+            <UseDefault>false</UseDefault>
+          </GeneratorOptions>
+          <GeneratorType>PgSqlBigIntegerGenerator</GeneratorType>
+          <GeneratorId>f75050e5-1420-4661-8e49-95082ec3ee6c</GeneratorId>
+          <GeneratorName>ID (sequential)</GeneratorName>
+          <GeneratorDescription>1, 2, 3, 4, ..., 9, 10, 11, 12, ...</GeneratorDescription>
+          <GeneratorCategory>Business</GeneratorCategory>
+          <Length>8</Length>
+          <Precision>19</Precision>
+        </Column>
+        <Column Name="full_name">
+          <Checked>true</Checked>
+          <DataType>character varying</DataType>
+          <GeneratorOptions xsi:type="PgSqlRegularExpressionGeneratorOptions">
+            <AllowEmptyStrings>false</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Seed</ValueDistributionMode>
+            <SeedValue>43</SeedValue>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Expression>(($"FirstNamesMale.txt")|($"FirstNamesFemale.txt")) ($"LastNames.txt")</Expression>
+          </GeneratorOptions>
+          <GeneratorType>PgSqlRegularExpressionGenerator</GeneratorType>
+          <GeneratorId>c2e4fbf6-73a2-4f3e-a732-cd2604309813</GeneratorId>
+          <GeneratorName>Full Name</GeneratorName>
+          <GeneratorDescription>Malik Whitmore, Sherill Gaskin, Rigoberto Mundy, Joelle Childers, Vanna Doss, ...</GeneratorDescription>
+          <GeneratorCategory>Personal</GeneratorCategory>
+          <Length>120</Length>
+        </Column>
+        <Column Name="email">
+          <Checked>true</Checked>
+          <DataType>character varying</DataType>
+          <GeneratorOptions xsi:type="PgSqlRegularExpressionGeneratorOptions">
+            <AllowEmptyStrings>false</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Seed</ValueDistributionMode>
+            <SeedValue>43</SeedValue>
+            <Unique>true</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Expression>(((((($"FirstNamesMale.txt")|($"FirstNamesFemale.txt"))[_.]?)?($"LastNames.txt"))|(($"LastNames.txt")\C?)|(((($"FirstNamesMale.txt")|($"FirstNamesFemale.txt"))[_.]?(\C[_.]?)?)?($"LastNames.txt")))(\D{,3})?|\c{4,8}(\d{1,4}|[_.]\c{4,10}))@(example$"7"|nowhere$"3").com</Expression>
+          </GeneratorOptions>
+          <GeneratorType>PgSqlRegularExpressionGenerator</GeneratorType>
+          <GeneratorId>e1ab1b21-e921-4c3a-9680-01374e7103e4</GeneratorId>
+          <GeneratorName>Email</GeneratorName>
+          <GeneratorDescription>Danica.Foley@example.com, fstu@nowhere.com, CurtK_Burton@example.com, LaroseM696@nowhere.com, ...</GeneratorDescription>
+          <GeneratorCategory>Personal</GeneratorCategory>
+          <Length>254</Length>
+        </Column>
+        <Column Name="country_code">
+          <Checked>true</Checked>
+          <DataType>character varying</DataType>
+          <GeneratorOptions xsi:type="PgSqlRegularExpressionGeneratorOptions">
+            <AllowEmptyStrings>false</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Seed</ValueDistributionMode>
+            <SeedValue>43</SeedValue>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Expression>($"CountryCodes.csv[1]")</Expression>
+          </GeneratorOptions>
+          <GeneratorType>PgSqlRegularExpressionGenerator</GeneratorType>
+          <GeneratorId>14f7b282-dc1d-4ca6-b32c-f76a433eaa86</GeneratorId>
+          <GeneratorName>Country Code (ISO 3166-1 alpha-2)</GeneratorName>
+          <GeneratorDescription>BE, US, JP, UA, CH, GE, AU, ...</GeneratorDescription>
+          <GeneratorCategory>Location</GeneratorCategory>
+          <Length>2</Length>
+        </Column>
+        <Column Name="created_at">
+          <Checked>true</Checked>
+          <DataType>timestamp with time zone</DataType>
+          <GeneratorOptions xsi:type="PgTimestampTZGeneratorOptions">
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <UseDefault>false</UseDefault>
+            <ValueDistributionMode>Seed</ValueDistributionMode>
+            <SeedValue>43</SeedValue>
+            <SequentialValueTicks>864000000000</SequentialValueTicks>
+            <OffsetFromColumnMaxTimeTicks>10000000</OffsetFromColumnMaxTimeTicks>
+            <OffsetFromColumnMinTimeTicks>10000000</OffsetFromColumnMinTimeTicks>
+            <DateTimeRange>MinMaxDate</DateTimeRange>
+            <UseOffsetDetails>false</UseOffsetDetails>
+            <OffsetFromColumnMinDays>0</OffsetFromColumnMinDays>
+            <OffsetFromColumnMaxDays>7</OffsetFromColumnMaxDays>
+            <MinDate>1970-01-01T00:00:00</MinDate>
+            <MaxDate>2026-09-10T00:00:00+05:00</MaxDate>
+            <IsRandomizeDate>true</IsRandomizeDate>
+            <MaxTime>734280000000</MaxTime>
+            <MinTime>10000000</MinTime>
+            <IsRandomizeTime>true</IsRandomizeTime>
+            <MinFraction>0</MinFraction>
+            <MaxFraction>999</MaxFraction>
+            <MaxAllowedFraction>999</MaxAllowedFraction>
+            <IsRandomizeFraction>true</IsRandomizeFraction>
+            <Scale>0</Scale>
+            <Precision>3</Precision>
+            <IsRandomizeZone>true</IsRandomizeZone>
+            <MaxTimeZone>-14</MaxTimeZone>
+            <MinTimeZone>14</MinTimeZone>
+          </GeneratorOptions>
+          <GeneratorType>PgSqlTimestampTZGenerator</GeneratorType>
+          <GeneratorId>6c69ec35-36ad-41ab-8c82-d203298308b3</GeneratorId>
+          <GeneratorName>datetime with time zone</GeneratorName>
+          <GeneratorDescription>fill with date and time with fractional seconds values with time zone</GeneratorDescription>
+          <Length>8</Length>
+        </Column>
+      </Columns>
+    </Table>
+    <Table Name="sales.orders">
+      <Checked>true</Checked>
+      <Settings>
+        <Truncate>true</Truncate>
+        <RowsToGenerate>0</RowsToGenerate>
+        <PopulationDetails>
+          <PopulationType>RowsCount</PopulationType>
+          <RowsCount>1000</RowsCount>
+          <LookupProportion>30</LookupProportion>
+          <ProportionOfExistingData>10</ProportionOfExistingData>
+          <TimeTicksToPopulate>100000000</TimeTicksToPopulate>
+        </PopulationDetails>
+      </Settings>
+      <Columns>
+        <Column Name="order_id">
+          <Checked>true</Checked>
+          <DataType>bigint</DataType>
+          <GeneratorOptions xsi:type="PgSqlBigIntegerGeneratorOptions">
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>true</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Increment xsi:type="xsd:long">1</Increment>
+            <ValueDistributionMode>Sequential</ValueDistributionMode>
+            <SeedValue>46</SeedValue>
+            <MinValue>1</MinValue>
+            <MaxValue>9223372036854775807</MaxValue>
+            <UseDefault>false</UseDefault>
+          </GeneratorOptions>
+          <GeneratorType>PgSqlBigIntegerGenerator</GeneratorType>
+          <GeneratorId>f75050e5-1420-4661-8e49-95082ec3ee6c</GeneratorId>
+          <GeneratorName>ID (sequential)</GeneratorName>
+          <GeneratorDescription>1, 2, 3, 4, ..., 9, 10, 11, 12, ...</GeneratorDescription>
+          <GeneratorCategory>Business</GeneratorCategory>
+          <Length>8</Length>
+          <Precision>19</Precision>
+        </Column>
+        <Column Name="customer_id">
+          <Checked>true</Checked>
+          <DataType>bigint</DataType>
+          <GeneratorOptions xsi:type="ForeignKeyGeneratorOptions">
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Seed</ValueDistributionMode>
+            <SeedValue>46</SeedValue>
+            <RepeatValues>false</RepeatValues>
+            <FromTimes>1</FromTimes>
+            <ToTimes>10</ToTimes>
+            <ExcludeValues>false</ExcludeValues>
+            <ExclusionValuesPercent>1</ExclusionValuesPercent>
+          </GeneratorOptions>
+          <GeneratorType>ForeignKeyGenerator</GeneratorType>
+          <GeneratorId>5398cae0-2358-4c80-859d-1310da3e5475</GeneratorId>
+          <GeneratorName>Foreign Key (auto assigned)</GeneratorName>
+          <GeneratorDescription>references a column from parent table</GeneratorDescription>
+          <HasForeignKey>true</HasForeignKey>
+          <Length>8</Length>
+          <Precision>19</Precision>
+        </Column>
+        <Column Name="ordered_at">
+          <Checked>true</Checked>
+          <DataType>timestamp with time zone</DataType>
+          <GeneratorOptions xsi:type="PgTimestampTZGeneratorOptions">
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <UseDefault>false</UseDefault>
+            <ValueDistributionMode>Seed</ValueDistributionMode>
+            <SeedValue>46</SeedValue>
+            <SequentialValueTicks>864000000000</SequentialValueTicks>
+            <OffsetFromColumnMaxTimeTicks>10000000</OffsetFromColumnMaxTimeTicks>
+            <OffsetFromColumnMinTimeTicks>10000000</OffsetFromColumnMinTimeTicks>
+            <DateTimeRange>MinMaxDate</DateTimeRange>
+            <UseOffsetDetails>false</UseOffsetDetails>
+            <OffsetFromColumnMinDays>0</OffsetFromColumnMinDays>
+            <OffsetFromColumnMaxDays>7</OffsetFromColumnMaxDays>
+            <MinDate>1970-01-01T00:00:00</MinDate>
+            <MaxDate>2026-09-10T00:00:00+05:00</MaxDate>
+            <IsRandomizeDate>true</IsRandomizeDate>
+            <MaxTime>734280000000</MaxTime>
+            <MinTime>10000000</MinTime>
+            <IsRandomizeTime>true</IsRandomizeTime>
+            <MinFraction>0</MinFraction>
+            <MaxFraction>999</MaxFraction>
+            <MaxAllowedFraction>999</MaxAllowedFraction>
+            <IsRandomizeFraction>true</IsRandomizeFraction>
+            <Scale>0</Scale>
+            <Precision>3</Precision>
+            <IsRandomizeZone>true</IsRandomizeZone>
+            <MaxTimeZone>-14</MaxTimeZone>
+            <MinTimeZone>14</MinTimeZone>
+          </GeneratorOptions>
+          <GeneratorType>PgSqlTimestampTZGenerator</GeneratorType>
+          <GeneratorId>6c69ec35-36ad-41ab-8c82-d203298308b3</GeneratorId>
+          <GeneratorName>datetime with time zone</GeneratorName>
+          <GeneratorDescription>fill with date and time with fractional seconds values with time zone</GeneratorDescription>
+          <Length>8</Length>
+        </Column>
+        <Column Name="status">
+          <Checked>true</Checked>
+          <DataType>character varying</DataType>
+          <GeneratorOptions xsi:type="PgSqlRegularExpressionGeneratorOptions">
+            <AllowEmptyStrings>false</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Seed</ValueDistributionMode>
+            <SeedValue>46</SeedValue>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Expression>[0-9A-Z]+</Expression>
+          </GeneratorOptions>
+          <GeneratorType>PgSqlStringRegularExpressionGenerator</GeneratorType>
+          <GeneratorId>fad6a275-0546-43ee-a4ac-03b36fac7d71</GeneratorId>
+          <GeneratorName>Reg Exp</GeneratorName>
+          <GeneratorDescription>values based on a regular expression</GeneratorDescription>
+          <Length>20</Length>
+        </Column>
+        <Column Name="sales_channel">
+          <Checked>true</Checked>
+          <DataType>character varying</DataType>
+          <GeneratorOptions xsi:type="PgSqlRegularExpressionGeneratorOptions">
+            <AllowEmptyStrings>false</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Seed</ValueDistributionMode>
+            <SeedValue>47</SeedValue>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Expression>[0-9A-Z]+</Expression>
+          </GeneratorOptions>
+          <GeneratorType>PgSqlStringRegularExpressionGenerator</GeneratorType>
+          <GeneratorId>fad6a275-0546-43ee-a4ac-03b36fac7d71</GeneratorId>
+          <GeneratorName>Reg Exp</GeneratorName>
+          <GeneratorDescription>values based on a regular expression</GeneratorDescription>
+          <Length>20</Length>
+        </Column>
+      </Columns>
+    </Table>
+    <Table Name="sales.products">
+      <Checked>true</Checked>
+      <Settings>
+        <Truncate>true</Truncate>
+        <RowsToGenerate>0</RowsToGenerate>
+        <PopulationDetails>
+          <PopulationType>RowsCount</PopulationType>
+          <RowsCount>1000</RowsCount>
+          <LookupProportion>30</LookupProportion>
+          <ProportionOfExistingData>10</ProportionOfExistingData>
+          <TimeTicksToPopulate>100000000</TimeTicksToPopulate>
+        </PopulationDetails>
+      </Settings>
+      <Columns>
+        <Column Name="product_id">
+          <Checked>true</Checked>
+          <DataType>bigint</DataType>
+          <GeneratorOptions xsi:type="PgSqlBigIntegerGeneratorOptions">
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>true</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Increment xsi:type="xsd:long">1</Increment>
+            <ValueDistributionMode>Sequential</ValueDistributionMode>
+            <SeedValue>48</SeedValue>
+            <MinValue>1</MinValue>
+            <MaxValue>9223372036854775807</MaxValue>
+            <UseDefault>false</UseDefault>
+          </GeneratorOptions>
+          <GeneratorType>PgSqlBigIntegerGenerator</GeneratorType>
+          <GeneratorId>f75050e5-1420-4661-8e49-95082ec3ee6c</GeneratorId>
+          <GeneratorName>ID (sequential)</GeneratorName>
+          <GeneratorDescription>1, 2, 3, 4, ..., 9, 10, 11, 12, ...</GeneratorDescription>
+          <GeneratorCategory>Business</GeneratorCategory>
+          <Length>8</Length>
+          <Precision>19</Precision>
+        </Column>
+        <Column Name="category_id">
+          <Checked>true</Checked>
+          <DataType>integer</DataType>
+          <GeneratorOptions xsi:type="ForeignKeyGeneratorOptions">
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Seed</ValueDistributionMode>
+            <SeedValue>48</SeedValue>
+            <RepeatValues>false</RepeatValues>
+            <FromTimes>1</FromTimes>
+            <ToTimes>10</ToTimes>
+            <ExcludeValues>false</ExcludeValues>
+            <ExclusionValuesPercent>1</ExclusionValuesPercent>
+          </GeneratorOptions>
+          <GeneratorType>ForeignKeyGenerator</GeneratorType>
+          <GeneratorId>5398cae0-2358-4c80-859d-1310da3e5475</GeneratorId>
+          <GeneratorName>Foreign Key (auto assigned)</GeneratorName>
+          <GeneratorDescription>references a column from parent table</GeneratorDescription>
+          <HasForeignKey>true</HasForeignKey>
+          <Length>4</Length>
+          <Precision>10</Precision>
+        </Column>
+        <Column Name="sku">
+          <Checked>true</Checked>
+          <DataType>character varying</DataType>
+          <GeneratorOptions xsi:type="PgSqlRegularExpressionGeneratorOptions">
+            <AllowEmptyStrings>false</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Seed</ValueDistributionMode>
+            <SeedValue>48</SeedValue>
+            <Unique>true</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Expression>[0-9A-Z]+</Expression>
+          </GeneratorOptions>
+          <GeneratorType>PgSqlStringRegularExpressionGenerator</GeneratorType>
+          <GeneratorId>fad6a275-0546-43ee-a4ac-03b36fac7d71</GeneratorId>
+          <GeneratorName>Reg Exp</GeneratorName>
+          <GeneratorDescription>values based on a regular expression</GeneratorDescription>
+          <Length>32</Length>
+        </Column>
+        <Column Name="product_name">
+          <Checked>true</Checked>
+          <DataType>character varying</DataType>
+          <GeneratorOptions xsi:type="PgSqlRegularExpressionGeneratorOptions">
+            <AllowEmptyStrings>false</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Seed</ValueDistributionMode>
+            <SeedValue>48</SeedValue>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Expression>((Com|Speak|Sub|Con|Mic|Tweet|Read|Tab|Cab|Tab|Bi|Te|Mono|Print|Pro|Mon|Arm|Sup|Cart|Char|Re|Clean|Re|Trans|An|Stereo|Play|Com|Amp)(put|hold|ceiv|woof|mut|top|ta|le|cul|cess|tell|ject|find|pick|band|cord|plott|tin|cycl|tect|ni|cord|lict|tin|lifi)(|ic|im|in|up|ad|er||on|ep|ed|let|ga|aqu|ef|edg|op|oll|omm|ew|fi|an|ex|pl)?(er|or|er|on|phone|ra|entor|ator|ar|er|scope|or|ry|ridge|let))</Expression>
+          </GeneratorOptions>
+          <GeneratorType>PgSqlRegularExpressionGenerator</GeneratorType>
+          <GeneratorId>84121b23-8bf8-4df5-af9d-28439a77cbbd</GeneratorId>
+          <GeneratorName>Product Name</GeneratorName>
+          <GeneratorDescription>Repickentor, Playtinon, Cleantinedridge, Tweetnier, Cartholdoper, ... </GeneratorDescription>
+          <GeneratorCategory>Product</GeneratorCategory>
+          <Length>140</Length>
+        </Column>
+        <Column Name="unit_price">
+          <Checked>true</Checked>
+          <DataType>numeric</DataType>
+          <GeneratorOptions xsi:type="PgNumericGeneratorOptions">
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Increment xsi:type="xsd:decimal">1</Increment>
+            <ValueDistributionMode>Seed</ValueDistributionMode>
+            <SeedValue>48</SeedValue>
+            <MinValue>99</MinValue>
+            <MaxValue>1999</MaxValue>
+            <UseDefault>false</UseDefault>
+          </GeneratorOptions>
+          <GeneratorType>PgSqlNumericGenerator</GeneratorType>
+          <GeneratorId>823e9725-b8c4-40db-81e5-c254d7653540</GeneratorId>
+          <GeneratorName>Product Cost</GeneratorName>
+          <GeneratorDescription>379, 942, 158, 261, ...</GeneratorDescription>
+          <GeneratorCategory>Product</GeneratorCategory>
+          <Scale>2</Scale>
+          <Precision>12</Precision>
+        </Column>
+        <Column Name="is_active">
+          <Checked>true</Checked>
+          <DataType>boolean</DataType>
+          <GeneratorOptions xsi:type="BitGeneratorOptions">
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <UseDefault>false</UseDefault>
+            <ValueDistributionMode>Seed</ValueDistributionMode>
+            <SeedValue>48</SeedValue>
+            <TrueProbability>0.5</TrueProbability>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+          </GeneratorOptions>
+          <GeneratorType>PgSqlBooleanGenerator</GeneratorType>
+          <GeneratorId>5941e04c-4cc2-4049-93a9-4e9f1225dd04</GeneratorId>
+          <GeneratorName>bit</GeneratorName>
+          <GeneratorDescription>fill with true or false values</GeneratorDescription>
+          <Length>1</Length>
+        </Column>
+        <Column Name="created_at">
+          <Checked>true</Checked>
+          <DataType>timestamp with time zone</DataType>
+          <GeneratorOptions xsi:type="PgTimestampTZGeneratorOptions">
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <UseDefault>false</UseDefault>
+            <ValueDistributionMode>Seed</ValueDistributionMode>
+            <SeedValue>48</SeedValue>
+            <SequentialValueTicks>864000000000</SequentialValueTicks>
+            <OffsetFromColumnMaxTimeTicks>10000000</OffsetFromColumnMaxTimeTicks>
+            <OffsetFromColumnMinTimeTicks>10000000</OffsetFromColumnMinTimeTicks>
+            <DateTimeRange>MinMaxDate</DateTimeRange>
+            <UseOffsetDetails>false</UseOffsetDetails>
+            <OffsetFromColumnMinDays>0</OffsetFromColumnMinDays>
+            <OffsetFromColumnMaxDays>7</OffsetFromColumnMaxDays>
+            <MinDate>1970-01-01T00:00:00</MinDate>
+            <MaxDate>2026-09-10T00:00:00+05:00</MaxDate>
+            <IsRandomizeDate>true</IsRandomizeDate>
+            <MaxTime>734280000000</MaxTime>
+            <MinTime>10000000</MinTime>
+            <IsRandomizeTime>true</IsRandomizeTime>
+            <MinFraction>0</MinFraction>
+            <MaxFraction>999</MaxFraction>
+            <MaxAllowedFraction>999</MaxAllowedFraction>
+            <IsRandomizeFraction>true</IsRandomizeFraction>
+            <Scale>0</Scale>
+            <Precision>3</Precision>
+            <IsRandomizeZone>true</IsRandomizeZone>
+            <MaxTimeZone>-14</MaxTimeZone>
+            <MinTimeZone>14</MinTimeZone>
+          </GeneratorOptions>
+          <GeneratorType>PgSqlTimestampTZGenerator</GeneratorType>
+          <GeneratorId>6c69ec35-36ad-41ab-8c82-d203298308b3</GeneratorId>
+          <GeneratorName>datetime with time zone</GeneratorName>
+          <GeneratorDescription>fill with date and time with fractional seconds values with time zone</GeneratorDescription>
+          <Length>8</Length>
+        </Column>
+      </Columns>
+    </Table>
+    <Table Name="sales.order_items">
+      <Checked>true</Checked>
+      <Settings>
+        <Truncate>true</Truncate>
+        <RowsToGenerate>0</RowsToGenerate>
+        <PopulationDetails>
+          <PopulationType>RowsCount</PopulationType>
+          <RowsCount>5000</RowsCount>
+          <LookupProportion>30</LookupProportion>
+          <ProportionOfExistingData>10</ProportionOfExistingData>
+          <TimeTicksToPopulate>100000000</TimeTicksToPopulate>
+        </PopulationDetails>
+      </Settings>
+      <Columns>
+        <Column Name="order_item_id">
+          <Checked>true</Checked>
+          <DataType>bigint</DataType>
+          <GeneratorOptions xsi:type="PgSqlBigIntegerGeneratorOptions">
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>true</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Increment xsi:type="xsd:long">1</Increment>
+            <ValueDistributionMode>Sequential</ValueDistributionMode>
+            <SeedValue>44</SeedValue>
+            <MinValue>1</MinValue>
+            <MaxValue>9223372036854775807</MaxValue>
+            <UseDefault>false</UseDefault>
+          </GeneratorOptions>
+          <GeneratorType>PgSqlBigIntegerGenerator</GeneratorType>
+          <GeneratorId>f75050e5-1420-4661-8e49-95082ec3ee6c</GeneratorId>
+          <GeneratorName>ID (sequential)</GeneratorName>
+          <GeneratorDescription>1, 2, 3, 4, ..., 9, 10, 11, 12, ...</GeneratorDescription>
+          <GeneratorCategory>Business</GeneratorCategory>
+          <Length>8</Length>
+          <Precision>19</Precision>
+        </Column>
+        <Column Name="order_id">
+          <Checked>true</Checked>
+          <DataType>bigint</DataType>
+          <GeneratorOptions xsi:type="ForeignKeyGeneratorOptions">
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Seed</ValueDistributionMode>
+            <SeedValue>44</SeedValue>
+            <RepeatValues>false</RepeatValues>
+            <FromTimes>1</FromTimes>
+            <ToTimes>10</ToTimes>
+            <ExcludeValues>false</ExcludeValues>
+            <ExclusionValuesPercent>1</ExclusionValuesPercent>
+          </GeneratorOptions>
+          <GeneratorType>ForeignKeyGenerator</GeneratorType>
+          <GeneratorId>5398cae0-2358-4c80-859d-1310da3e5475</GeneratorId>
+          <GeneratorName>Foreign Key (auto assigned)</GeneratorName>
+          <GeneratorDescription>references a column from parent table</GeneratorDescription>
+          <HasForeignKey>true</HasForeignKey>
+          <Length>8</Length>
+          <Precision>19</Precision>
+        </Column>
+        <Column Name="product_id">
+          <Checked>true</Checked>
+          <DataType>bigint</DataType>
+          <GeneratorOptions xsi:type="ForeignKeyGeneratorOptions">
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Seed</ValueDistributionMode>
+            <SeedValue>45</SeedValue>
+            <RepeatValues>false</RepeatValues>
+            <FromTimes>1</FromTimes>
+            <ToTimes>10</ToTimes>
+            <ExcludeValues>false</ExcludeValues>
+            <ExclusionValuesPercent>1</ExclusionValuesPercent>
+          </GeneratorOptions>
+          <GeneratorType>ForeignKeyGenerator</GeneratorType>
+          <GeneratorId>5398cae0-2358-4c80-859d-1310da3e5475</GeneratorId>
+          <GeneratorName>Foreign Key (auto assigned)</GeneratorName>
+          <GeneratorDescription>references a column from parent table</GeneratorDescription>
+          <HasForeignKey>true</HasForeignKey>
+          <Length>8</Length>
+          <Precision>19</Precision>
+        </Column>
+        <Column Name="quantity">
+          <Checked>true</Checked>
+          <DataType>smallint</DataType>
+          <GeneratorOptions xsi:type="PgSqlSmallIntegerGeneratorOptions">
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Increment xsi:type="xsd:short">1</Increment>
+            <ValueDistributionMode>Seed</ValueDistributionMode>
+            <SeedValue>44</SeedValue>
+            <MinValue>1</MinValue>
+            <MaxValue>99</MaxValue>
+            <UseDefault>false</UseDefault>
+          </GeneratorOptions>
+          <GeneratorType>PgSqlSmallIntegerGenerator</GeneratorType>
+          <GeneratorId>a2c4f1df-d15e-4cd7-b95c-d26af90e23e6</GeneratorId>
+          <GeneratorName>Product Quantity</GeneratorName>
+          <GeneratorDescription>9, 24, 89, 35, ...</GeneratorDescription>
+          <GeneratorCategory>Product</GeneratorCategory>
+          <Length>2</Length>
+          <Precision>5</Precision>
+        </Column>
+        <Column Name="unit_price">
+          <Checked>true</Checked>
+          <DataType>numeric</DataType>
+          <GeneratorOptions xsi:type="PgNumericGeneratorOptions">
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Increment xsi:type="xsd:decimal">1</Increment>
+            <ValueDistributionMode>Seed</ValueDistributionMode>
+            <SeedValue>44</SeedValue>
+            <MinValue>99</MinValue>
+            <MaxValue>1999</MaxValue>
+            <UseDefault>false</UseDefault>
+          </GeneratorOptions>
+          <GeneratorType>PgSqlNumericGenerator</GeneratorType>
+          <GeneratorId>823e9725-b8c4-40db-81e5-c254d7653540</GeneratorId>
+          <GeneratorName>Product Cost</GeneratorName>
+          <GeneratorDescription>379, 942, 158, 261, ...</GeneratorDescription>
+          <GeneratorCategory>Product</GeneratorCategory>
+          <Scale>2</Scale>
+          <Precision>12</Precision>
+        </Column>
+        <Column Name="discount_percent">
+          <Checked>true</Checked>
+          <DataType>numeric</DataType>
+          <GeneratorOptions xsi:type="PgNumericGeneratorOptions">
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Increment xsi:type="xsd:decimal">1</Increment>
+            <ValueDistributionMode>Seed</ValueDistributionMode>
+            <SeedValue>44</SeedValue>
+            <MinValue>-999</MinValue>
+            <MaxValue>999</MaxValue>
+            <UseDefault>false</UseDefault>
+            <DefaultValue>0</DefaultValue>
+          </GeneratorOptions>
+          <GeneratorType>PgSqlNumericGenerator</GeneratorType>
+          <GeneratorId>7c332776-49ef-41f9-b189-4fe1fec5a93c</GeneratorId>
+          <GeneratorName>decimal</GeneratorName>
+          <GeneratorDescription>fill with fixed precision and scale number values</GeneratorDescription>
+          <Scale>2</Scale>
+          <Precision>5</Precision>
+        </Column>
+      </Columns>
+    </Table>
+  </Tables>
+  <SynchronizationOptions xsi:type="PgSqlDgDataSynchronizationOptions">
+    <SynchronizeType>File</SynchronizeType>
+    <ExecuteCustomScriptTypeBefore>None UseEmbeddedScript</ExecuteCustomScriptTypeBefore>
+    <ExecuteCustomScriptTypeAfter>None Execute UseEmbeddedScript</ExecuteCustomScriptTypeAfter>
+    <EmbeddedScriptAfter>UPDATE sales.order_items AS oi 
+SET unit_price = p.unit_price 
+FROM sales.products AS p 
+WHERE p.product_id = oi.product_id;</EmbeddedScriptAfter>
+  </SynchronizationOptions>
+</DataGenDocument>

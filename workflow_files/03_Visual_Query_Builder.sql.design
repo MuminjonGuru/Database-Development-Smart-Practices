@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Devart (www.devart.com), SQL document design file -->
+<!-- Modifying this generated file will probably render it invalid -->
+<Document>
+  <Properties>
+    <Type>SQL Document Design</Type>
+    <DatabaseProvider>77a9b459-6f15-4675-8e18-cdd88f58e376</DatabaseProvider>
+    <ProviderVersion>2026.1.112.0</ProviderVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+  </Properties>
+  <Connection>
+    <ConnectionModel>
+      <PropertyValue Name="Database">77a9b459-6f15-4675-8e18-cdd88f58e376</PropertyValue>
+      <PropertyValue Name="Id">475b30b1-6c93-4dff-89c8-7207d3989c82</PropertyValue>
+      <PropertyValue Name="ConnectionString" xml:space="preserve">User Id=postgres;Host=localhost;Port=5432;Database=retail_ops_dev;Unicode=True;Connection Timeout=15;Integrated Security=False</PropertyValue>
+    </ConnectionModel>
+    <Database>retail_ops_dev</Database>
+  </Connection>
+  <Views ShowAdditionalViews="False" IsLayoutActiveAttribute="False" MainViewAttribute="Design" MainViewScale="75">
+    <View Name="Design" Active="True" Visible="True">
+      <Data>
+        <StatementType>Select</StatementType>
+        <ActiveQuery>0</ActiveQuery>
+        <SubQuery Id="0" Open="0" LocationX="-580.8" LocationY="-210.4" Scale="1">
+          <PageOptions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <HorizontalOverlap>0</HorizontalOverlap>
+            <VerticalOverlap>0</VerticalOverlap>
+            <TopLeftMargins>
+              <Width>10 mm</Width>
+              <Height>10 mm</Height>
+            </TopLeftMargins>
+            <BottomRightMargins>
+              <Width>10 mm</Width>
+              <Height>10 mm</Height>
+            </BottomRightMargins>
+            <PaperSize>
+              <Width>210 mm</Width>
+              <Height>297 mm</Height>
+            </PaperSize>
+          </PageOptions>
+          <Tables>
+            <Table Name="customers" Left="-536" Top="-176" Width="203.0838" Height="134" Collapsed="False" />
+            <Table Name="orders" Left="-168.8" Top="-174.4" Width="203.0838" Height="134" Collapsed="False" />
+            <Table Name="order_items" Left="229.6" Top="-169.6" Width="218.0772" Height="152" Collapsed="False" />
+            <Table Name="products" Left="8" Top="16" Width="203.0838" Height="170" Collapsed="False" />
+            <Table Name="categories" Left="-392" Top="56" Width="207.7713" Height="90" Collapsed="False" />
+          </Tables>
+        </SubQuery>
+      </Data>
+    </View>
+    <View Name="Code" Visible="True">
+      <Data />
+    </View>
+    <View Name="Data" Visible="True" />
+    <View Name="Profiler" Visible="False" />
+    <View Name="PivotGrid" Visible="False" />
+  </Views>
+</Document>

@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Devart (www.devart.com), compare document file -->
+<!-- Modifying this generated file will probably render it invalid -->
+<CompareDocument>
+  <Properties>
+    <DatabaseProvider>77a9b459-6f15-4675-8e18-cdd88f58e376</DatabaseProvider>
+    <ProviderVersion>2026.1.112.0</ProviderVersion>
+    <SchemaVersion>1.7</SchemaVersion>
+  </Properties>
+  <Source Type="Database">
+    <ConnectionModel>
+      <PropertyValue Name="Database">77a9b459-6f15-4675-8e18-cdd88f58e376</PropertyValue>
+      <PropertyValue Name="Id">475b30b1-6c93-4dff-89c8-7207d3989c82</PropertyValue>
+      <PropertyValue Name="ConnectionString" xml:space="preserve">User Id=postgres;Host=localhost;Port=5432;Database=retail_ops_dev;Unicode=True;Connection Timeout=15;Integrated Security=False</PropertyValue>
+    </ConnectionModel>
+    <Schema>retail_ops_dev</Schema>
+  </Source>
+  <Target Type="Database">
+    <ConnectionModel>
+      <PropertyValue Name="Database">77a9b459-6f15-4675-8e18-cdd88f58e376</PropertyValue>
+      <PropertyValue Name="Id">ca895a52-5e48-447f-980b-ad8c7d1baa69</PropertyValue>
+      <PropertyValue Name="ConnectionString" xml:space="preserve">User Id=postgres;Host=localhost;Port=5432;Database=retail_ops_staging;Unicode=True;Connection Timeout=15;Integrated Security=False</PropertyValue>
+    </ConnectionModel>
+    <Schema>retail_ops_staging</Schema>
+  </Target>
+  <GroupType Value="Status" />
+  <Filter Value="0" />
+  <ComparisonOptions>
+    <ForceColumnOrder>true</ForceColumnOrder>
+    <IgnorePermissions>false</IgnorePermissions>
+    <IgnoreColumnDefaultValues>false</IgnoreColumnDefaultValues>
+    <IgnoreForeignKeys>false</IgnoreForeignKeys>
+    <IgnoreConstraintsNames>false</IgnoreConstraintsNames>
+    <IgnoreIdentity>false</IgnoreIdentity>
+    <IgnoreDataTypesInColumn>false</IgnoreDataTypesInColumn>
+    <IgnoreDatabaseObjectOwners>true</IgnoreDatabaseObjectOwners>
+    <IgnoreComments>false</IgnoreComments>
+    <IgnoreTableDmlTriggers>false</IgnoreTableDmlTriggers>
+    <CompareDatabaseProperties>true</CompareDatabaseProperties>
+    <IgnoreDatabaseLevelRoleParameters>true</IgnoreDatabaseLevelRoleParameters>
+    <AppendTimestamp>true</AppendTimestamp>
+    <TargetDatabaseName xml:space="preserve">retail_ops_staging</TargetDatabaseName>
+    <MappingIgnoreSpaces>false</MappingIgnoreSpaces>
+    <MappingIgnoreCase>false</MappingIgnoreCase>
+    <MappingSimilar>false</MappingSimilar>
+    <MappingSimilarPercent xml:space="preserve">80</MappingSimilarPercent>
+    <IgnoreCase>false</IgnoreCase>
+    <IgnoreWhiteSpace>true</IgnoreWhiteSpace>
+    <IgnoreSequencesIncrementBy>false</IgnoreSequencesIncrementBy>
+    <IgnoreSequencesCycle>false</IgnoreSequencesCycle>
+    <IgnoreSequencesCache>false</IgnoreSequencesCache>
+    <IgnoreSequencesMinValue>false</IgnoreSequencesMinValue>
+    <IgnoreSequencesMaxValue>false</IgnoreSequencesMaxValue>
+    <IgnoreSequencesInitials>true</IgnoreSequencesInitials>
+  </ComparisonOptions>
+  <ObjectFilter>
+    <FiltersCollection FormatVersion="1.0">
+      <FilterViewModel Checked="True" Filter="" Include="True" ObjectName="All object types" />
+      <FilterViewModel Checked="True" Filter="" Include="True" ObjectName="Database" />
+      <FilterViewModel Checked="True" Filter="" Include="True" ObjectName="DdlTrigger" />
+      <FilterViewModel Checked="True" Filter="" Include="True" ObjectName="Function" />
+      <FilterViewModel Checked="True" Filter="" Include="True" ObjectName="MaterializedView" />
+      <FilterViewModel Checked="True" Filter="" Include="True" ObjectName="Procedure" />
+      <FilterViewModel Checked="True" Filter="" Include="True" ObjectName="Schema" />
+      <FilterViewModel Checked="True" Filter="" Include="True" ObjectName="Sequence" />
+      <FilterViewModel Checked="True" Filter="" Include="True" ObjectName="Table" />
+      <FilterViewModel Checked="True" Filter="" Include="True" ObjectName="TableValuedFunction" />
+      <FilterViewModel Checked="True" Filter="" Include="True" ObjectName="View" />
+    </FiltersCollection>
+    <ObjectFilterName Name="Custom*" />
+    <ObjectFilterModified Modified="False" />
+  </ObjectFilter>
+  <ModifiedObjects />
+  <SynchronizationOptions>
+    <PropertyValue Name="UseSubSchemaNamePrefix">true</PropertyValue>
+    <PropertyValue Name="ExcludeComments">false</PropertyValue>
+    <PropertyValue Name="ExecuteAsSingleTransaction">true</PropertyValue>
+    <PropertyValue Name="SynchronizeType">2</PropertyValue>
+    <PropertyValue Name="SynchronizationFileName" xml:space="preserve" />
+    <PropertyValue Name="SynchronizationEditorFileName" xml:space="preserve" />
+    <PropertyValue Name="OpenScriptInEditor">false</PropertyValue>
+    <PropertyValue Name="RefreshAfterSynchronization">true</PropertyValue>
+    <PropertyValue Name="OpenScriptsFolder">false</PropertyValue>
+    <PropertyValue Name="ExecuteCustomScriptTypeBefore">0</PropertyValue>
+    <PropertyValue Name="EmbeddedScriptBefore" xml:space="preserve" />
+    <PropertyValue Name="ExternalScriptBefore" xml:space="preserve" />
+    <PropertyValue Name="ExecuteCustomScriptTypeAfter">0</PropertyValue>
+    <PropertyValue Name="IncludeStatementUSEBefore">false</PropertyValue>
+    <PropertyValue Name="EmbeddedScriptAfter" xml:space="preserve" />
+    <PropertyValue Name="ExternalScriptAfter" xml:space="preserve" />
+    <PropertyValue Name="IncludeStatementUSEAfter">false</PropertyValue>
+  </SynchronizationOptions>
+  <Mapping ExcludeUnmappedSchemas="False">
+    <Schemas>
+      <Object SourceName="public" TargetName="public" State="DefaultMapped" Included="True" />
+      <Object SourceName="sales" TargetName="sales" State="DefaultMapped" Included="True" />
+    </Schemas>
+    <ComparedObjects>
+      <Object SourceName="sales.categories" TargetName="sales.categories" SourceType="Table" TargetType="Table" State="Different" />
+      <Object SourceName="sales.customers" TargetName="sales.customers" SourceType="Table" TargetType="Table" State="Different" />
+      <Object SourceName="sales.order_items" TargetName="sales.order_items" SourceType="Table" TargetType="Table" State="Different" />
+      <Object SourceName="sales.orders" TargetName="sales.orders" SourceType="Table" TargetType="Table" State="Different" />
+      <Object SourceName="sales.products" TargetName="sales.products" SourceType="Table" TargetType="Table" State="Different" />
+    </ComparedObjects>
+  </Mapping>
+  <Issues />
+</CompareDocument>
