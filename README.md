@@ -6,13 +6,13 @@ Here are SQL scripts and dbForge project files for a practical PostgreSQL deploy
 
 The workflow demonstrates how dbForge Studio for PostgreSQL helps manage a single database change from a first working query to a deployment-ready script. You will be able to do the following:
 
-- Write and review a SQL query, checking its result grain before aggregating
-- Use the built-in AI Assistant as a second review surface for an existing query
-- Build and validate a multi-table query visually with Query Builder
-- Compare a development and a staging schema before deployment and generate a synchronization script
-- Generate relational test data that preserves foreign key relationships
-- Profile a slow query, read its execution plan, and fix the bottleneck without changing the result
-- Generate the final view DDL as a reviewable deployment artifact
+* Write and review a SQL query, checking its result grain before aggregating
+* Use the built-in AI Assistant as a second review surface for an existing query
+* Build and validate a multi-table query visually with Query Builder
+* Compare a development and a staging schema before deployment and generate a synchronization script
+* Generate relational test data that preserves foreign key relationships
+* Profile a slow query, read its execution plan, and fix the bottleneck without changing the result
+* Generate the final view DDL as a reviewable deployment artifact
 
 ## Demo Scenario
 
@@ -22,6 +22,7 @@ The task: build a category-revenue report broken down by customer country and sa
 
 ## Repository Structure
 
+```text
 .
 ├── README.md
 ├── LICENSE
@@ -50,19 +51,24 @@ The task: build a category-revenue report broken down by customer country and sa
     ├── 03_visual_query_builder.sql.design
     ├── 04_schema_compare_dev_vs_staging.scomp
     └── 04_data_generator_retail_ops_test.dgen
+```
 
 ## Folders
 
 ### `retail_ops_population_scripts/`
+
 Sets up and resets the `retail_ops_dev` and `retail_ops_staging` databases: the base schema, reporting-only columns and a view added in development, seed reference data (12 categories, 144 products), a transactional dataset with roughly 1.2 million rows, and a reset script that preserves the schema and reference data. See the folder's own README for run order.
 
 ### `retail_ops_dev/`
+
 Five working query files for reviewing and profiling: the first grain-checked query, a reference five-table query, unoptimized and optimized profiling candidates, and an `EXCEPT ALL` validation script confirming both profiling candidates return identical rows. See the folder's own README for details.
 
 ### `retail_ops_staging/`
+
 The base schema only, no reporting columns or views, representing the environment that a schema comparison would run against before deployment.
 
 ### `workflow_files/`
+
 dbForge Studio project files and generated SQL: a query reviewed by the AI Assistant, generated view DDL, Query Builder output, a schema comparison project (`retail_ops_dev` vs `retail_ops_staging`), and a data generation project (`retail_ops_test`).
 
 ## Notes
@@ -70,11 +76,12 @@ dbForge Studio project files and generated SQL: a query reviewed by the AI Assis
 This repository is for educational and demonstration purposes.
 
 Before running any script against a real environment:
-- Review the SQL manually, including JOIN conditions and result grain
-- Check the target database and connection before comparing or synchronizing schemas
-- Validate indexes and constraints
-- Test the execution plan
-- Confirm no destructive changes are included
+
+* Review the SQL manually, including JOIN conditions and result grain
+* Check the target database and connection before comparing or synchronizing schemas
+* Validate indexes and constraints
+* Test the execution plan
+* Confirm no destructive changes are included
 
 Schema Compare, Data Generator, and Query Profiler (three of the six workflow steps shown here) require the Professional edition of dbForge Studio for PostgreSQL. Query Builder, AI Assistant, and DDL generation are available in the free Express edition.
 
@@ -83,5 +90,3 @@ Schema Compare, Data Generator, and Query Profiler (three of the six workflow st
 This workflow was created with dbForge Studio for PostgreSQL, part of the dbForge database development and management ecosystem by Devart.
 
 Learn more: [dbForge Studio for PostgreSQL](https://www.devart.com/dbforge/postgresql/studio/)
-
-
